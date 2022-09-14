@@ -16,7 +16,7 @@ const Sidebar: React.FC = () => {
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-between",
-        width: 320,
+        minWidth: 320,
         height: "calc(100vh - 60px)",
       }}
     >
