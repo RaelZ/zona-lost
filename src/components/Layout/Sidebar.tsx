@@ -2,6 +2,7 @@ import { Button, Grid } from "@mui/material"
 import React from "react"
 import { useLocation, useNavigate } from "react-router-dom"
 import { sidebar } from "../../data/sidebar"
+import UserSession from "../UserSession"
 import Footer from "./Footer"
 
 const Sidebar: React.FC = () => {
@@ -58,7 +59,10 @@ const Sidebar: React.FC = () => {
           </Grid>
         ))}
       </Grid>
-      <Footer />
+      <Grid>
+        <UserSession />
+        <Footer />
+      </Grid>
     </Grid>
   )
 }
