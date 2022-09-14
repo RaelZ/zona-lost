@@ -1,4 +1,7 @@
+import InDevelopment from "../components/InDevelopment"
 import Home from "../pages/Home"
+import Journal from "../pages/Journal"
+import Users from "../pages/Users"
 
 export const routes = [
   {
@@ -8,17 +11,17 @@ export const routes = [
   },
   {
     id: 2,
-    component: <Home />,
+    component: <InDevelopment />,
     path: "/news",
   },
   {
     id: 3,
-    component: <Home />,
+    component: <Journal />,
     path: "/qode-journal",
   },
   {
     id: 4,
-    component: <Home />,
+    component: <Users />,
     path: "/ubuntos",
   },
 ]

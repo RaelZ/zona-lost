@@ -5,8 +5,11 @@ import { dashboardAPI } from "../../api/dashboard";
 import { helpAPI } from "../../api/helps";
 import CardHome from "../../components/CardHome";
 import HelpsList from "../../components/HelpsList";
+import { useUsers } from "../../hooks";
 
 const Home: React.FC = () => {
+  const { users, loadUsers } = useUsers()
+
   const [anuncios, setAnuncios] = useState(0);
   const [journals, setJournals] = useState(0);
   const [todayHelps, setTodayHelps] = useState(0);
@@ -20,6 +23,10 @@ const Home: React.FC = () => {
     dashboardAPI.getTodayHelpsCards().then((res) => setTodayHelps(res));
     helpAPI.getAll().then((res) => setHelps(res));
   }, []);
+
+  useEffect(() => {
+    loadUsers()
+  }, [loadUsers])
 
   return (
     <Grid p={2} width="100%" bgcolor="#FAFAFA">
@@ -52,9 +59,9 @@ const Home: React.FC = () => {
       </Grid>
       <Grid container spacing={2} pt={2}>
         <Grid item xl={12} lg={12} md={12} sm={12} xs={12}>
-          <Card sx={{ boxShadow: "0 0 15px #0000001F", p: 2, maxHeight: 480, overflow: 'auto' }}>
+          <Card sx={{ boxShadow: "0 0 15px #0000001F", p: 2, maxHeight: '100%', overflow: 'auto' }}>
             {helps.slice(0, 6).map((map: any) => (
-              <HelpsList key={map.id} help={map} />
+              <HelpsList key={map.id} help={map} users={users} />
             ))}
           </Card>
         </Grid>
