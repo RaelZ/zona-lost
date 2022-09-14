@@ -15,7 +15,7 @@ import Create from "./Create";
 const UsersComp: React.FC<any> = ({ users, projects, loadUsers }) => {
   const [open, setOpen] = useState(false)
   return (
-    <Grid width="100%" p={2} bgcolor="#FAFAFA">
+    <Grid width="100%" height="100%" p={2} bgcolor="#FAFAFA">
       <Grid display="flex" alignItems="center">
         <AddCircle onClick={() => setOpen(true)} sx={{ fontSize: 32, color: '#56CCF2', cursor: 'pointer' }} /> <Refresh onClick={() => loadUsers()} sx={{ fontSize: 32, color: '#aaa', cursor: 'pointer' }} />
       </Grid>

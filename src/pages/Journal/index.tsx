@@ -13,9 +13,9 @@ const Journal: React.FC = () => {
   }, []);
   useEffect(() => {
     loadUsers();
-  }, []);
+  }, [loadUsers]);
   return (
-    <Grid p={2} bgcolor="#FAFAFA">
+    <Grid p={2} height="100%" bgcolor="#FAFAFA">
       <Card
         sx={{
           boxShadow: "none",

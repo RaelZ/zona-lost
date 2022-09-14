@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import App from "./App";
+import AnnoucementsProvider from "./contexts/AnnoucementsContext";
 import LanguageProvider from "./contexts/LanguageContext";
 import ProjectsProvider from "./contexts/ProjectsContext";
 import UsersProvider from "./contexts/UsersContext";
@@ -16,7 +17,9 @@ root.render(
       <UsersProvider>
         <ProjectsProvider>
           <LanguageProvider>
-            <App />
+            <AnnoucementsProvider>
+              <App />
+            </AnnoucementsProvider>
           </LanguageProvider>
         </ProjectsProvider>
       </UsersProvider>

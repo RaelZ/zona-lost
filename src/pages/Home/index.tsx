@@ -29,7 +29,7 @@ const Home: React.FC = () => {
   }, [loadUsers])
 
   return (
-    <Grid p={2} width="100%" bgcolor="#FAFAFA">
+    <Grid p={2} width="100%" height="100%" bgcolor="#FAFAFA">
       <Grid
         container
         spacing={2}

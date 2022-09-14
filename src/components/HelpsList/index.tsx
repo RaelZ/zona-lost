@@ -3,9 +3,7 @@ import moment from "moment";
 import React from "react";
 
 const HelpsList: React.FC<any> = (props) => {
-  const user = props.users.find(
-    (find: any) => find.id === props.help.solicitantId
-  );
+  const user = props.users.find((find: any) => find.id === props.help.solicitantId);
   return (
     <Grid bgcolor="#ddd" mb={2} p={1} sx={{ borderRadius: 2 }}>
       <Typography>{`Descrição: ${props.help.description}`}</Typography>

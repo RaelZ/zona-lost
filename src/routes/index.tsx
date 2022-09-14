@@ -1,4 +1,4 @@
-import InDevelopment from "../components/InDevelopment"
+import Annoucements from "../pages/Annoucements"
 import Home from "../pages/Home"
 import Journal from "../pages/Journal"
 import Users from "../pages/Users"
@@ -11,7 +11,7 @@ export const routes = [
   },
   {
     id: 2,
-    component: <InDevelopment />,
+    component: <Annoucements />,
     path: "/news",
   },
   {

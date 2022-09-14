@@ -13,11 +13,11 @@ const Sidebar: React.FC = () => {
     <Grid
       pl={2}
       sx={{
+        position: 'relative',
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-between",
         minWidth: 320,
-        height: "calc(100vh - 60px)",
       }}
     >
       <Grid sx={{ display: "flex", flexDirection: "column" }}>
