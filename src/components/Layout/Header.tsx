@@ -8,7 +8,7 @@ const Header: React.FC = () => {
       <Grid sx={{ minWidth: 320, backgroundColor: "#FAFAFA", height: 60,
           backgroundImage: `url(${logo})`,
           backgroundRepeat: "no-repeat",
-          backgroundSize: "contain",
+          backgroundSize: "80px 48px",
           backgroundPosition: "center",
         }}
       />

@@ -35,6 +35,7 @@ const Sidebar: React.FC = () => {
               }
               fullWidth
               disableElevation
+              startIcon={buttons.icon}
               sx={{
                 cursor: "pointer",
                 justifyContent: "flex-start",
