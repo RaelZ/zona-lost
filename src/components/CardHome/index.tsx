@@ -8,7 +8,7 @@ const CardHome: React.FC<any> = ({ title, value, icon }) => {
         <Grid display="flex" alignItems="center" p={2}><Typography>{icon}</Typography></Grid>
         <Grid display="flex" justifyContent="center" flexDirection="column" p={2}>
           <Typography>{title}</Typography>
-          <Typography>{value}</Typography>
+          <Typography fontSize={32}>{value}</Typography>
         </Grid>
       </Grid>
     </Card>
