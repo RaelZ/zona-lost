@@ -34,7 +34,7 @@ const UserSession: React.FC = () => {
       display="flex"
       alignItems="center"
       p={2}
-      sx={{ border: "1px solid #999", borderRadius: 2, cursor: "pointer" }}
+      sx={{ border: "1px solid #ccc", borderRadius: 2, cursor: "pointer", mr: 2 }}
     >
       <Grid display="flex" alignItems="center">
         <Avatar {...stringAvatar("Felipe Brito")} />
