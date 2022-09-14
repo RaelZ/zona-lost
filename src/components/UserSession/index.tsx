@@ -30,11 +30,21 @@ const UserSession: React.FC = () => {
     }
   }
   return (
-    <Grid display="flex" alignItems="center" p={2} sx={{ border: '1px solid #999', borderRadius: 2, cursor: 'pointer' }}>
+    <Grid
+      display="flex"
+      alignItems="center"
+      p={2}
+      sx={{ border: "1px solid #999", borderRadius: 2, cursor: "pointer" }}
+    >
       <Grid display="flex" alignItems="center">
         <Avatar {...stringAvatar("Felipe Brito")} />
       </Grid>
-      <Grid pl={1} display="flex" justifyContent="center" flexDirection="column">
+      <Grid
+        pl={1}
+        display="flex"
+        justifyContent="center"
+        flexDirection="column"
+      >
         <Typography>Felipe Brito</Typography>
         <Typography>Product Manager</Typography>
       </Grid>
