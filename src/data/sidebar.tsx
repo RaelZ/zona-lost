@@ -26,7 +26,7 @@ export const sidebar = [
   },
   {
     id: 4,
-    label: "Ubuntos",
+    label: "Ubuntus",
     icon: <ContactPage />,
     path: "/ubuntos",
   },
