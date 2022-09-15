@@ -3,7 +3,7 @@ import moment from "moment";
 import React from "react";
 
 const HelpsList: React.FC<any> = ({ entity, users }) => {
-  const user = users.find((find: any) => find.id === entity.solicitantId || entity.ubuntuId);
+  const user = users.find((find: any) => find.id === entity.solicitantId || find.id === entity.ubuntuId);
   return (
     <Grid bgcolor="#ddd" mb={2} p={1} sx={{ borderRadius: 2 }}>
       <Typography>{`Descrição: ${entity.description}`}</Typography>
