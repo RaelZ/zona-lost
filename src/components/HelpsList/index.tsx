@@ -10,7 +10,7 @@ const HelpsList: React.FC<any> = ({ entity, users }) => {
       <Grid pt={1} display="flex" width="100%" justifyContent="space-between">
         <Typography fontWeight={600}>{user?.name}</Typography>
         <Typography fontWeight={600}>
-          {moment(entity.openedDate).format("DD/MM/yyyy")}
+          {moment(entity.openedDate || entity.createdDate).format("DD/MM/yyyy")}
         </Typography>
       </Grid>
     </Grid>
