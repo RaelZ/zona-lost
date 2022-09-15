@@ -1,15 +1,15 @@
 import { Card, Grid } from "@mui/material";
 import React, { useEffect, useState } from "react";
-import { helpAPI } from "../../api/helps";
+import { journalAPI } from "../../api/journalAPI";
 import HelpsList from "../../components/HelpsList";
 import { useUsers } from "../../hooks";
 
 const Journal: React.FC = () => {
   const { users, loadUsers } = useUsers();
-  const [helps, setHelps] = useState([]);
+  const [journals, setJournals] = useState([]);
 
   useEffect(() => {
-    helpAPI.getAll().then((res) => setHelps(res));
+    journalAPI.getAll().then((res) => setJournals(res));
   }, []);
   useEffect(() => {
     loadUsers();
@@ -23,8 +23,8 @@ const Journal: React.FC = () => {
           overflow: "auto",
         }}
       >
-        {helps.map((map: any) => (
-          <HelpsList key={map.id} help={map} users={users} />
+        {journals.map((map: any) => (
+          <HelpsList key={map.id} entity={map} users={users} />
         ))}
       </Card>
     </Grid>

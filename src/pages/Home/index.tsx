@@ -61,7 +61,7 @@ const Home: React.FC = () => {
         <Grid item xl={12} lg={12} md={12} sm={12} xs={12}>
           <Card sx={{ boxShadow: "0 0 15px #0000001F", p: 2, maxHeight: '100%', overflow: 'auto' }}>
             {helps.slice(0, 6).map((map: any) => (
-              <HelpsList key={map.id} help={map} users={users} />
+              <HelpsList key={map.id} entity={map} users={users} />
             ))}
           </Card>
         </Grid>
